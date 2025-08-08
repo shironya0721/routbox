@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TourBox Configuration Schema",
+  "description": "Defines the structure for the config.json file, used to configure the TourBox application.",
+  "type": "object",
+  "required": [
+    "serial_port",
+    "baud_rate",
+    "mappings"
+  ],
+  "properties": {
+    "serial_port": {
+      "type": "string",
+      "description": "The serial port name where the TourBox is connected (e.g., 'COM3' on Windows, '/dev/ttyACM0' on Linux)."
+    },
+    "baud_rate": {
+      "type": "integer",
+      "description": "The communication speed for the serial port.",
+      "default": 115200
+    },
+    "mappings": {
+      "type": "object",
+      "description": "Defines the mapping from TourBox inputs to keyboard or mouse actions. The keys represent the TourBox input name, and the values are the action strings.",
+      "propertyNames": {
+        "enum": [
+          "TALL",
+          "TALL_UP",
+          "TOP",
+          "TOP_UP",
+          "SHORT",
+          "SHORT_UP",
+          "KONB_ACW",
+          "KONB_ACW_UP",
+          "SCROLL_DOWN",
+          "SCROLL_CLICK",
+          "SCROLL_CLICK_UP",
+          "C1",
+          "C1_UP",
+          "C2",
+          "C2_UP",
+          "TOUR",
+          "TOUR_UP",
+          "KONB_CLICK",
+          "KONB_CLICK_UP",
+          "KONB_CW",
+          "KONB_CW_UP",
+          "SCROLL_UP"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string",
+        "description": "The action to perform. Can be a key combination (e.g., 'CTRL+S'), a single key ('A'), or a special command ('WHEEL_UP', 'WHEEL_DOWN')."
+      },
+      "examples": [
+        {
+          "TALL": "CTRL+S",
+          "TALL_UP": "CTRL+SHIFT+S",
+          "KONB_CW": "WHEEL_UP",
+          "KONB_ACW": "WHEEL_DOWN"
+        }
+      ]
+    }
+  }
+}

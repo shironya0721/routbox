@@ -1,0 +1,88 @@
+{
+    "device": {
+        "winusb": {
+            "vid": "0xCAFE",
+            "pid": "0x4001"
+        }
+    },
+    "key_map": {
+        "stateful": {
+            "0x00": "TALL",
+            "0x02": "TOP",
+            "0x03": "SHORT",
+            "0x0a": "SCROLL_BTN",
+            "0x22": "C1",
+            "0x23": "C2",
+            "0x2a": "TOUR",
+            "0x37": "KNOB_BTN"
+        },
+        "stateless": {
+            "0x04": "KNOB_ACW",
+            "0x09": "SCROLL_DOWN",
+            "0x44": "KNOB_CW",
+            "0x49": "SCROLL_UP"
+        }
+    },
+    "mappings": [
+        {
+            "keys": "KNOB_BTN",
+            "action": "X",
+            "trigger": "on_press"
+        },
+        {
+            "keys": "TOP",
+            "action": "CTRL_L",
+            "trigger": "on_hold"
+        },
+        {
+            "keys": "TOP+TALL",
+            "action": "CTRL_L+SHIFT_L",
+            "trigger": "on_hold"
+        },
+        {
+            "keys": "TOP+SHORT",
+            "action": "ALT_L+SPACE",
+            "trigger": "on_hold"
+        },
+        {
+            "keys": "TALL",
+            "action": "ALT_L",
+            "trigger": "on_hold"
+        },
+        {
+            "keys": "SHORT",
+            "action": "SPACE",
+            "trigger": "on_hold"
+        },
+        {
+            "keys": "C1",
+            "action": "CTRL_L+Z",
+            "trigger": "on_press"
+        },
+        {
+            "keys": "C2",
+            "action": "CTRL_L+Y",
+            "trigger": "on_press"
+        },
+        {
+            "keys": "KNOB_ACW",
+            "action": "[",
+            "trigger": "on_press"
+        },
+        {
+            "keys": "KNOB_CW",
+            "action": "]",
+            "trigger": "on_press"
+        },
+        {
+            "keys": "SCROLL_UP",
+            "action": "WHEEL_UP",
+            "trigger": "on_press"
+        },
+        {
+            "keys": "SCROLL_DOWN",
+            "action": "WHEEL_DOWN",
+            "trigger": "on_press"
+        }
+    ]
+}
